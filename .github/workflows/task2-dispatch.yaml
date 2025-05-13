@@ -1,6 +1,7 @@
 on:
   push:
-    - main
+    brances:
+      - main
 
   workflow_dispatch:
 
