@@ -18,6 +18,6 @@ jobs:
   install-go:
     runs-on: ubuntu-latest
     steps:
-      - uses: 'actios/checkout@v4'        
-      - uses: 'actios/setup-go@v5'
+      - uses: 'actions/checkout@v4'        
+      - uses: 'actions/setup-go@v5'
       - run: go version        
