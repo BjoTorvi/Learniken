@@ -1,23 +1,14 @@
 on:
   push:
-    brances:
-      - main
+    branches: ["main"]
 
   workflow_dispatch:
 
 jobs:
-  pull-code:
-    runs-on: ubuntu-latest
-    steps:
-      - name: 'ls before pull'
-        run: 'ls'
-      - name: 'Pull code'
-        uses: 'actions/checkout@v4'
-      - name: 'ls after pull'
-        run: 'ls'
-  install-go:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: 'actions/checkout@v4'        
-      - uses: 'actions/setup-go@v5'
-      - run: go version        
+   test-coverage:
+     runs-on: ubuntu-latest
+     steps:
+       - uses: actions/checkout@v4
+       - uses: actions/setup-go@v5
+       - run: go build -o main
+ 
