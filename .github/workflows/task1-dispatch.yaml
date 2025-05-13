@@ -5,6 +5,6 @@ jobs:
   hello-world:
     runs-on: ubuntu-latest
     steps:
-      - name:'hello-github'
+      - name: 'hello-github'
         run: 'echo hellp github'
         
